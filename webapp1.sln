@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapp1", "webapp1\webapp1.csproj", "{F3ADA3B9-BDB6-4932-A1A7-7961A25BD1D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedSTS - OWIN", "EmbeddedSTS - OWIN\EmbeddedSTS - OWIN.csproj", "{2C8FDF4E-93A6-4D19-93A9-01255CF94500}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedStsOWIN", "EmbeddedSTS - OWIN\EmbeddedStsOWIN.csproj", "{2C8FDF4E-93A6-4D19-93A9-01255CF94500}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

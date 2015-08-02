@@ -1,7 +1,33 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Home Page";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div class="jumbotron">
+    <h1>Webapp with remote STS sample</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p><a href="~/Home/Logout" class="btn btn-primary btn-large">Logout</a></p>
+    }
+    else
+    {
+        <p><a href="~/Home/Login" class="btn btn-primary btn-large">Login</a></p>
+    }
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="row">
+        <h1>Claims</h1>
+        @foreach (var claim in System.Security.Claims.ClaimsPrincipal.Current.Claims)
+        {
+            <div class="col-sm-12">
+                @claim.Type, @claim.Value
+            </div>
+        }
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+}

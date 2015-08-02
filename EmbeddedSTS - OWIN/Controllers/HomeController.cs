@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.IdentityModel.Protocols.WSFederation;
+using Microsoft.IdentityModel.Web;
 
-namespace EmbeddedSTS___OWIN.Controllers
+namespace EmbeddedStsOWIN.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,18 +15,17 @@ namespace EmbeddedSTS___OWIN.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [Authorize]
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return RedirectToAction("Index");
         }
 
-        public ActionResult Contact()
+        public ActionResult Logout()
         {
-            ViewBag.Message = "Your contact page.";
+            FederatedAuthentication.WSFederationAuthenticationModule.SignOut(false);
 
-            return View();
-        }
+            return RedirectToAction("Index");
+        }       
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace EmbeddedSTS___OWIN
+namespace EmbeddedStsOWIN
 {
     public class FilterConfig
     {

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace EmbeddedSTS___OWIN
+namespace EmbeddedStsOWIN
 {
     public class BundleConfig
     {
