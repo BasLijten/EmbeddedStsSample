@@ -21,8 +21,8 @@ namespace EmbeddedStsOWIN
                 new WsFederationAuthenticationOptions
                 {
                     MetadataAddress = "http://localhost:29702/FederationMetadata",                    
-                    Wtrealm = "urn:Bladiebla",
-                    Wreply = "http://localhost:16635/_trust/",
+                    Wtrealm = "urn:SupaDoopaRealm",       
+                    Wreply             = "http://localhost:16635/"
                 }
             );
 
